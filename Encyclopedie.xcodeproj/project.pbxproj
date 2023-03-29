@@ -11,6 +11,14 @@
 		7553F62B29B8CCC300902206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553F62A29B8CCC300902206 /* ContentView.swift */; };
 		7553F62D29B8CCC400902206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7553F62C29B8CCC400902206 /* Assets.xcassets */; };
 		7553F63029B8CCC400902206 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7553F62F29B8CCC400902206 /* Preview Assets.xcassets */; };
+		7553F63729B8CCDB00902206 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553F63629B8CCDB00902206 /* Article.swift */; };
+		7553F63929B8CCEC00902206 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553F63829B8CCEC00902206 /* ArticleViewModel.swift */; };
+		7553F63B29B8CD0100902206 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553F63A29B8CD0100902206 /* ArticleListView.swift */; };
+		7553F63D29B8CD1800902206 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553F63C29B8CD1800902206 /* ArticleDetailView.swift */; };
+		75FD0F7829CD9F24007768AA /* WikipediaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD0F7729CD9F24007768AA /* WikipediaListView.swift */; };
+		75FD0F7A29CD9FC4007768AA /* WikiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD0F7929CD9FC4007768AA /* WikiViewModel.swift */; };
+		75FD0F7C29CDA019007768AA /* Wiki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD0F7B29CDA019007768AA /* Wiki.swift */; };
+		75FD0F7E29CE0126007768AA /* WikiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD0F7D29CE0126007768AA /* WikiDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		7553F62A29B8CCC300902206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7553F62C29B8CCC400902206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7553F62F29B8CCC400902206 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7553F63629B8CCDB00902206 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		7553F63829B8CCEC00902206 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		7553F63A29B8CD0100902206 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		7553F63C29B8CD1800902206 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		75FD0F7729CD9F24007768AA /* WikipediaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaListView.swift; sourceTree = "<group>"; };
+		75FD0F7929CD9FC4007768AA /* WikiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewModel.swift; sourceTree = "<group>"; };
+		75FD0F7B29CDA019007768AA /* Wiki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wiki.swift; sourceTree = "<group>"; };
+		75FD0F7D29CE0126007768AA /* WikiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				7553F62829B8CCC300902206 /* EncyclopedieApp.swift */,
-				7553F62A29B8CCC300902206 /* ContentView.swift */,
+				75FD0F7629CD92C5007768AA /* View */,
+				75FD0F7529CD92BB007768AA /* ViewModel */,
+				75FD0F7429CD92B3007768AA /* Model */,
 				7553F62C29B8CCC400902206 /* Assets.xcassets */,
 				7553F62E29B8CCC400902206 /* Preview Content */,
 			);
@@ -65,6 +83,36 @@
 				7553F62F29B8CCC400902206 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		75FD0F7429CD92B3007768AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7553F63629B8CCDB00902206 /* Article.swift */,
+				75FD0F7B29CDA019007768AA /* Wiki.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75FD0F7529CD92BB007768AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7553F63829B8CCEC00902206 /* ArticleViewModel.swift */,
+				75FD0F7929CD9FC4007768AA /* WikiViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		75FD0F7629CD92C5007768AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7553F62A29B8CCC300902206 /* ContentView.swift */,
+				7553F63A29B8CD0100902206 /* ArticleListView.swift */,
+				7553F63C29B8CD1800902206 /* ArticleDetailView.swift */,
+				75FD0F7729CD9F24007768AA /* WikipediaListView.swift */,
+				75FD0F7D29CE0126007768AA /* WikiDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7553F63D29B8CD1800902206 /* ArticleDetailView.swift in Sources */,
 				7553F62B29B8CCC300902206 /* ContentView.swift in Sources */,
+				75FD0F7C29CDA019007768AA /* Wiki.swift in Sources */,
+				75FD0F7E29CE0126007768AA /* WikiDetailView.swift in Sources */,
+				7553F63B29B8CD0100902206 /* ArticleListView.swift in Sources */,
+				75FD0F7829CD9F24007768AA /* WikipediaListView.swift in Sources */,
+				7553F63929B8CCEC00902206 /* ArticleViewModel.swift in Sources */,
 				7553F62929B8CCC300902206 /* EncyclopedieApp.swift in Sources */,
+				75FD0F7A29CD9FC4007768AA /* WikiViewModel.swift in Sources */,
+				7553F63729B8CCDB00902206 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

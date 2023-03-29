@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct WikiDetailView: View {
+    var wikiId: Int
+    @ObservedObject var viewModel = WikiViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(viewModel.wiki.query.pages.values.first!.title)
+                .font(.title3)
+                .fontWeight(.medium)
+                .foregroundColor(.indigo)
+                .padding()
+            ScrollView(showsIndicators: false) {
+                Text(viewModel.wiki.query.pages.values.first!.extract!)
+                    .padding()
+                    .lineSpacing(8)
+                Spacer()
+            }
+            .onAppear {
+                Task {
+                    viewModel.wiki = try await viewModel.fetchWikiDetails(id: wikiId)
+                }
+            }
+        }
+        .background(Image("background").resizable().scaledToFill().ignoresSafeArea())
     }
 }
 
 struct WikiDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        WikiDetailView()
+        WikiDetailView(wikiId: 41893)
     }
 }

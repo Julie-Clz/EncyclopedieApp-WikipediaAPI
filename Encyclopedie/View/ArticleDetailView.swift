@@ -9,25 +9,30 @@ import SwiftUI
 
 struct ArticleDetailView: View {
     let article: Article
-    
     var body: some View {
         VStack {
             Text(article.title)
                 .font(.title)
-            Text(article.content)
-                .padding()
-            Spacer()
+                .foregroundColor(.indigo)
+                .fontWeight(.medium)
+                .padding(.top, 40)
+            ScrollView(showsIndicators: false) {
+                Image(article.image)
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                Text(article.content)
+                    .padding()
+                    .lineSpacing(8)
+                Spacer()
+            }
         }
-//        .navigationTitle(article.title)
-        .navigationBarTitleDisplayMode(.inline)
         .background(Image("background").resizable().scaledToFill().ignoresSafeArea())
     }
 }
 
 struct ArticleDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            ArticleDetailView(article: Article(title: "Le mont Blanc", content: "Le mont Blanc est le plus haut sommet d'Europe occidentale, culminant à 4 809 mètres d'altitude."))
-        }
+        ArticleDetailView(article: ArticleViewModel().articles.first!)
     }
 }
